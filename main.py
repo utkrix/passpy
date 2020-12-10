@@ -5,14 +5,18 @@ def login():
     while count < 3:
         user_input = getpass.getpass("Enter the master password! ")
         if user_input == master_pass:
-            print("Welcome to Ajoeks-Pass Pass")
-            from menu import mainmenu
+            user_input = int(input('''Welcome to PassPy\nEnter:\n1--> To create a new password! 
+            \n2--> To view all passwords!\n---> '''))
+            if user_input == 1:
+                from newpass import mainmenu
         else:
             print("Wrong password! Please enter again! ")
             count = count + 1
     else:
-        print("You have exceeded the number of tries. Ajoeks-Pass Pass does not like scammers or hackers! ")
+        print("You have exceeded the number of tries. PassPy does not like scammers or hackers! ")
         exit
+    
+        
 login()
         
 
