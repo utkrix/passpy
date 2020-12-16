@@ -15,7 +15,7 @@ def mainmenu():
     conf = input("If all the credentials match press Y; If not press N!")
     confirmation = conf.upper()
     if confirmation == "Y":
-        print("Your information has now been saved to database!")
+        print("Processing Data!")
     while confirmation == "N":
         name_of_site = input("Enter the name of the website! ")
         email = input("Enter the email associcated with the account! ")
@@ -29,7 +29,7 @@ def mainmenu():
         conf = input("If all the credentials match press Y; If not press N!")
         confirmation = conf.upper()
         if confirmation == "Y":
-            print("Your information has now been saved to database!")  
+            print("Processing Data!")  
     database(name_of_site, email, conf_passwd)
 
 
@@ -40,5 +40,5 @@ def database(name_of_site, email, conf_passwd):
     val = (name_of_site, email, conf_passwd)
     cursor.execute(sql, val)
     mydb.commit()
-    print(cursor.rowcount, "record inserted.")
+    print("Your credentials have now been saved to database.")
 mainmenu()

@@ -6,7 +6,7 @@ def login():
         user_input = getpass.getpass("Enter the master password! ")
         if user_input == master_pass:
             user_input = int(input('''Welcome to PassPy\nEnter:\n1--> To create a new password! 
-            \n2--> To view all passwords!\n---> '''))
+            \n2--> To view all passwords!\n3--> Search for credentials associated with the site.'''))
             if user_input == 1:
                 from newpass import mainmenu
         else:
